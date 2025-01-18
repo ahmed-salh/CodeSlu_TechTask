@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "961894844694",
+    "project_id": "codeslu-techtask",
+    "storage_bucket": "codeslu-techtask.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:961894844694:android:a14d00e6f74f5e9cc92837",
+        "android_client_info": {
+          "package_name": "com.AhmedSaleh.CodeSlu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDx5r-_b1Tu5XUcWIDpVY35EwCWt_XnCck"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
