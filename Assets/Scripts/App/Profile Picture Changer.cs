@@ -1,4 +1,5 @@
-
+using Firebase;
+using Firebase.Auth;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -12,6 +13,5 @@ public class ProfilePictureChanger : MonoBehaviour, IPointerDownHandler
     {
         _profilePic.sprite = GetComponent<Image>().sprite;
     }
-
 
 }

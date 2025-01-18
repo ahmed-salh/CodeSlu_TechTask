@@ -1,13 +1,34 @@
 using Firebase;
 using Firebase.Auth;
 using Firebase.Extensions;
-
+using Firebase.Database;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
-public class FirebaseManager : MonoBehaviour
+public class FirebaseManager: MonoBehaviour
 {
     private FirebaseAuth auth;
+
+    [SerializeField]
+    private PlayerData playerData;
+
+    private DatabaseReference databaseRef;
+
+    private static FirebaseManager _instance;
+
+    public static FirebaseManager Instance 
+    {
+        get 
+        {
+            if (_instance == null)
+            {
+                _instance = new FirebaseManager();
+            }
+            return _instance;
+        }
+
+    }
 
     [SerializeField]
     private Text userText;
@@ -23,8 +44,6 @@ public class FirebaseManager : MonoBehaviour
                     SignInAnonymously();
 
                 userText.text = ("User ID: " + auth.CurrentUser.UserId);
-
-
             }
             else
             {
@@ -37,7 +56,7 @@ public class FirebaseManager : MonoBehaviour
     void InitializeFirebase()
     {
         auth = FirebaseAuth.DefaultInstance;
-        Debug.Log("Firebase initialized!");
+
     }
 
     public void SignInAnonymously()
@@ -55,8 +74,4 @@ public class FirebaseManager : MonoBehaviour
         });
     }
 
-    public void UpleadData() 
-    {
-    
-    }
 }
